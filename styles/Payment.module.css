@@ -1,0 +1,152 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.box{
+    display: flex;
+    background-color: rgba(40, 36, 46, 0.8);
+    border-radius: 35px;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    margin: 10px 0px;
+    position: relative;
+}
+
+.box:first-child{
+    margin-top: 0px;
+}
+
+.box:last-child{
+    margin-bottom: 0px;
+}
+
+.box::before{
+    content: url('../public/cc.svg');
+    margin-right: 20px;
+}
+
+.edit{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(65, 54, 80);
+    border-radius: 20px;
+    right: 20px;
+    background-image: url('../public/edit.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+}
+
+.button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.purchase{
+    color: #eceaf5;
+    padding: 15px 50px;
+    background: rgb(114,63,254);
+    background: linear-gradient(120deg, rgba(114,63,254,1) 0%, rgba(174,85,255,1) 100%);
+    box-shadow: 0px 0px 10px -1px rgba(114,63,254, 0.75);
+    -webkit-box-shadow: 0px 0px 10px -1px rgba(114,63,254, 0.75);
+    -moz-box-shadow: 0px 0px 10px -1px rgba(114,63,254, 0.75);
+    margin-top: 15px;
+}
+
+.description{
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.payment{
+    display: flex;
+    background-color: rgba(40, 36, 46, 0.8);
+    border-radius: 35px;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    margin: 10px 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+.payment:first-child{
+    margin-top: 0px;
+}
+
+.payment:last-child{
+    margin-bottom: 0px;
+}
+
+.payment::before{
+    content: "\00a0";
+    border: 3px solid #726f76;
+    background-color: #ebe9f8;
+    height: 10px;
+    width: 10px;
+    border-radius: 20px;
+    margin-top: 3px;
+    margin-right: 10px;
+}
+
+.duration{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.paymentinfo{
+    width: 100%;
+}
+
+.payment:focus{
+    background-color: rgba(51, 46, 58, 0.9);
+}
+
+.yearly{
+    outline: 2px solid #3795ff;
+}
+
+.monthly{
+    outline: 2px solid #cfced6;
+}
+
+.yearly::after{
+    content: "\00a0";
+    width: 100px;
+    padding: 10px;
+    position: absolute;
+    transform: rotate(40deg);
+    background-color: #3795ff;
+    right: -60px;
+    top: 0px;
+}
+
+.recommended{
+    z-index: 1;
+    position: absolute;
+    top: 3px;
+    right: -20px;
+    width: 50px;
+    height: 50px;
+    background-image: url('../public/starwhite.svg');;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 407px){
+    .description{
+        font-size: 12px;
+    }
+    .duration{
+        flex-direction: column;
+    }
+    .edit{
+        display: none;
+    }
+}
